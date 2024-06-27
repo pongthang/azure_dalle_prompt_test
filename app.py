@@ -5,7 +5,6 @@ from datetime import datetime
 from openai import AzureOpenAI
 import os
 import requests
-from PIL import Image
 import json
 
 app = Flask(__name__)
