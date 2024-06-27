@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Images and Description </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div>
+        <h1>Write Your Prompt Here</h1>
+
+        <form method="POST" class="styled-form">
+            <!-- <input name="prompt" value="{{prompt}}" class="input-prompt"> -->
+            <textarea name="prompt" class="textarea-prompt">{{ prompt }}</textarea>
+            <input type="submit" value="Generate" class="submit-button">
+        </form>
+
+    </div>
+    <h1>Images and Description</h1>
+    <div class="gallery">
+        {% for image, description, _ in images %}
+            <div class="image-item">
+                <img src="{{ url_for('static', filename=image.split('static/')[1]) }}" alt="Image">
+                <p>{{ description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
