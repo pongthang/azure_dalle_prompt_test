@@ -17,9 +17,17 @@ pip install requests
 ```
 ## Start the Flask webapp.
 
-``` python
+``` bash
 git clone https://github.com/pongthang/azure_dalle_prompt_test.git
 cd flask_images_github
+```
+## Changes in app.py
+In app.py there are big comment lines . Put your API key, Deployment Endpoints and Model Name\
+
+![changes](readme_asset/changes.png)
+
+### Then run the webapp
+``` bash
 python app.py
 ```
 ## Open the WebApp at http://127.0.0.1:5000/
